@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+ 	font-family: 'Helvetica';
+ }
+
+.item {
+	border: 1px solid black;
+	margin: 20px;
+	padding: 20px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}

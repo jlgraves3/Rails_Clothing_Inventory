@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
 			redirect_to @item
 		else
 			alert('error')
+		end
 	end
 
 	def edit
@@ -30,6 +31,7 @@ class ItemsController < ApplicationController
 		else
 			alert('error')
 		end
+	end
 
 	private
 
