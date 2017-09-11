@@ -5,7 +5,7 @@ class Item < ApplicationRecord
 	validates_presence_of :name
 	validates_presence_of :price
 	validates_presence_of :size
-	validates_presence_of :src
+	validates_presence_of :src, allow_nil: true
 	# validates :src, allow_nil: true
 	validates_presence_of :color_id
 	validates_presence_of :brand_id

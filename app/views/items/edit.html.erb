@@ -1,23 +1,37 @@
 <h1>Edit Item</h1>
-<% form_for(@item), url: {action: "update"}, html: {class: "edit-form"} do |f| %>
-<%=f.label :name %>
-<%=f.text_field :name %>
+<%= form_for(@item, :html => {:class => "form"}) do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field "name" %>
 
-<%=f.label :size %>
-<%=f.text_field :size %>
+	<%= f.label :size %>
+	<%= f.text_field :size %>
 
-<%=f.label :price %>
-<%=f.text_field :price %>
+	<%= f.label :price %>
+	<%= f.text_field :price %>
 
-<%=f.label :name %>
-<%=f.text_field :name %>
+	<%= f.label "image url" %>
+	<%= f.text_field :src %>
 
-<%=f.label :img %>
-<%=f.text_field :src %>
+	<%= f.label :color %>
+	<%= f.select(:color_id) do %>
+	<% @colors.each do |color| %>
+	<%= content_tag(:option, color.name, value: color.id) %>
+	<% end %>
+	<% end %>
 
-<%=f.label :color %>
-<%=f.text_field :color %>
+	<%= f.label :brand %>
+	<%= f.select(:brand_id) do %>
+	<% @brands.each do |brand| %>
+	<%= content_tag(:option, brand.name, value: brand.id) %>
+	<% end %>
+	<% end %>
 
+	<%= f.label :type %>
+	<%= f.select(:type_id) do %>
+	<% @types.each do |type| %>
+	<%= content_tag(:option, type.name, value: type.id) %>
+	<% end %>
+	<% end %>
 <%= f.submit %>
-
 <% end %>
+
