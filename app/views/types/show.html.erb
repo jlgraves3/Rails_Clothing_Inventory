@@ -1,9 +1,9 @@
-<h1><%= @brand.name %></h1>
-<% @brand.items.each do |item| %>
+<h1><%= @type.name %></h1>
+<% @type.items.each do |item| %>
 <div class='item' >
 	<a href=<%= "/items/#{item.id}" %>>
 	<h3 class='uppercase'><%=item.name %></h3>
-	<h4 class='uppercase'><%=item.type.name %></h4>
+	<h4><%= item.brand.name %></h4>
 	</a>
 </div>
 <% end%>
