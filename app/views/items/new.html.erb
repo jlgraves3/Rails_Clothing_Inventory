@@ -3,15 +3,6 @@
 	<%= f.label :name %>
 	<%= f.text_field "name" %>
 
-	<%= f.label :size %>
-	<%= f.text_field :size %>
-
-	<%= f.label :price %>
-	<%= f.text_field :price %>
-
-	<%= f.label "image url" %>
-	<%= f.text_field :src %>
-
 	<%= f.label :color %>
 	<%= f.select(:color_id) do %>
 	<% @colors.each do |color| %>

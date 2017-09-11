@@ -19,9 +19,11 @@ class BrandsController < ApplicationController
 		else
 			flash[:notice] = @brand.errors.full_messages.join(', ') 
 			redirect_to new_brand_path
+		end
 	end
 
 	def destroy
+		puts "DESTROYYYYY #{@brand}"
 		if @brand.destroy
 			redirect_to brands_path
 		else
