@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-	before_action :set_item, only: [:show, :edit, :update, :destroy]
 	def index
 		@items = Item.all
 	end
@@ -10,15 +9,21 @@ class ItemsController < ApplicationController
 
 	def new
 		@item = Item.new
+		@colors = Color.all
+		@types = Type.all
+		@brands = Brand.all
 	end
 
 	def create
 		@item = Item.new(item_params)
+		puts '***************'
+		puts item_params
 		if @item.valid?
 			@item.save
 			redirect_to @item
 		else
-			alert('error')
+			flash[:notice] = @item.errors.full_messages.join(', ') 
+			redirect_to new_item_path
 		end
 	end
 
@@ -36,10 +41,6 @@ class ItemsController < ApplicationController
 	private
 
 	def item_params
-		params.require(:author).permit(:brand_id,:color_id,:type_id)
-	end
-
-	def set_item
-		@item = Item.find(params[:id])
+		params.require(:item).permit(:name, :size, :price, :src ,:brand_id,:color_id,:type_id)
 	end
 end

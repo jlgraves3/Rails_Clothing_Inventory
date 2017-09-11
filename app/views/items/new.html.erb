@@ -1,7 +1,7 @@
-<h1>Add</h1>
+<h1>Add Item</h1>
 <%= form_for(@item, :html => {:class => "form"}) do |f| %>
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field "name" %>
 
 	<%= f.label :size %>
 	<%= f.text_field :size %>
@@ -27,7 +27,7 @@
 	<% end %>
 
 	<%= f.label :type %>
-	<%= f.select(:type) do %>
+	<%= f.select(:type_id) do %>
 	<% @types.each do |type| %>
 	<%= content_tag(:option, type.name, value: type.id) %>
 	<% end %>
