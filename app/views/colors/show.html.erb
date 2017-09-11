@@ -1,0 +1,9 @@
+<h1><%= @color.name %></h1>
+<% @color.items.each do |item| %>
+<div class='item' >
+	<a href=<%= "/items/#{item.id}" %>>
+	<h3 class='uppercase'><%=item.name %></h3>
+	<h4 class='uppercase'><%=item.type.name %></h4>
+	</a>
+</div>
+<% end%>

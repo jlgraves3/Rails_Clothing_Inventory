@@ -1,0 +1,6 @@
+<h1>Colors</h1>
+<ul>
+<% @colors.each do |color| %>
+	<li><%= link_to("#{color.name}", color) %></li>
+<% end %>
+</ul>
