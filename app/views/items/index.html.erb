@@ -1,13 +1,12 @@
 <h1>Item Index</h1>
 <a href='/items/new'>Add Item</a>
-<% @items.each do |item| %>
-<div class='item' >
-	<a href=<%= "/items/#{item.id}" %>>
-	<h3 class='uppercase'><%=item.name %></h3>
-	<h4><%=item.brand.name %></h4>
-	<h4>$<%=item.price %></h4>
-	<h4>type: <%=item.type.name %></h4>
-	<h4>color: <%=item.color.name %></h4>
-	</a>
+<div class='container'>
+	<% @items.each do |item| %>
+	<div class='item' >
+		<a href=<%= "/items/#{item.id}" %>>
+		<h3 class='uppercase'><%=item.name %></h3>
+		<h4><%=item.brand.name %></h4>
+		</a>
+	</div>
+	<% end%>
 </div>
-<% end%>
