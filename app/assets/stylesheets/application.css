@@ -22,6 +22,7 @@
 
  h1 {
  	text-align: center;
+ 	color:  #FFE6E6;
  }
 
  h4 {
@@ -87,3 +88,28 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-left: 0;
+	flex-wrap: wrap;
+	list-style: none;
+	text-align: center;
+}
+
+li {
+	margin-bottom: 20px;
+	font-size: 18px;
+	padding: 10px;
+	width: 150px;
+	background-color: white;
+	border: 1px solid #970945;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+li a {
+ 	color: #970945;
+ }
