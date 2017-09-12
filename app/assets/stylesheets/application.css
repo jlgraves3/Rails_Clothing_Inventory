@@ -24,6 +24,11 @@
  h1 {
  	text-align: center;
  	text-transform: uppercase;
+ 	font-weight: 500;
+ }
+
+ h3 {
+ 	text-decoration: underline 
  }
 
  h4 {
@@ -58,21 +63,23 @@
 
 
 nav {
-	background-color: #3E31FF;
-	height: 80px;
+	background-color: #7DFAC6;
+	height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	margin-bottom: 50px;
 }
 
 nav a {
 	text-transform: uppercase;
+	font-weight: 800;
 	font-size: 14px;
-	color: white;
 }
-
 nav a:hover {
-	color: #FFEBB1;
+	border-bottom: 2px solid  #3E31FF;
+	padding-bottom: 5px;
+	color:  #3E31FF;
 	transition: 0.2s;
 }
 
@@ -80,6 +87,7 @@ a {
 	text-decoration: none;
 	color: #3E31FF;
 }
+
 button {
 	color: #3E31FF;
 	background-color: white;
@@ -163,13 +171,17 @@ li {
 }
 
 li:hover {
-	background-color: #FFEBB1;
+	background-color: #3E31FF;
 	transition: 0.4s;
 	cursor: pointer;
 }
 
 li a {
  	color: #3E31FF
+ }
+
+ li:hover a {
+ 	color: #7DFAC6;
  }
 
  .add {
@@ -184,3 +196,42 @@ li a {
  .add:hover a {
  	color: white;
  }
+
+ .links {
+ 	margin: 10px;
+ 	display: flex;
+ 	text-align: center;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	text-decoration: underline;
+ }
+
+  .links form {
+  	width: auto;
+  	margin: 0;
+  }
+
+ .links input {
+ 	padding: 0;
+ 	margin: 0;
+ 	border: none;
+ 	width: auto;
+ 	text-decoration: underline;
+ }
+
+.links input:hover, .links a:hover {
+	color: #7DFAC6;
+	transition: 0.5s;
+ }
+
+ input[type='submit']:hover {
+ 	background-color:  #3E31FF;
+ 	color: white;
+ 	cursor: pointer;
+ 	transition: 0.4s;
+ }
+
+ input[type='submit'] {
+ 	margin: 20px auto;
+ }
+
