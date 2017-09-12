@@ -1,6 +1,6 @@
 <h1>Brands</h1>
 <ul>
-	<li><a href='/brands/new'>Add Brand</a></li>
+	<li class='add'><a href='/brands/new'>+ Brand</a></li>
 <% @brands.each do |brand| %>
 	<li><%= link_to("#{brand.name}", brand) %></li>
 <% end %>

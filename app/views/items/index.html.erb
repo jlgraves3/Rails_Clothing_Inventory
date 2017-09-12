@@ -1,12 +1,14 @@
 <h1>Items</h1>
-<a href='/items/new'><button>Add Item</button></a>
-<div class='container'>
+
+<ul>
+	<li class='add'><a href='/items/new'>+ Item</button></a></li>
 	<% @items.each do |item| %>
-	<div class='item' >
+	<li>
 		<a href=<%= "/items/#{item.id}" %>>
-		<h3 class='uppercase'><%=item.name %></h3>
+		<h3><%=item.name %></h3>
 		<h4><%=item.brand.name %></h4>
 		</a>
-	</div>
+	</a>
+</li>
 	<% end%>
 </div>

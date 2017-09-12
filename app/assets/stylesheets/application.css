@@ -23,6 +23,7 @@
 
  h1 {
  	text-align: center;
+ 	text-transform: uppercase;
  }
 
  h4 {
@@ -169,4 +170,17 @@ li:hover {
 
 li a {
  	color: #3E31FF
+ }
+
+ .add {
+ 	border: 2px solid #3E31FF;
+ 	border-radius: 10px;
+ 	font-weight: bold;
+ }
+
+ .add:hover{
+ 	background-color: #3E31FF;
+ }
+ .add:hover a {
+ 	color: white;
  }

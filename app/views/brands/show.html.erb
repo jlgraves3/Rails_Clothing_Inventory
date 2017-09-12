@@ -1,5 +1,5 @@
 <h1><%= @brand.name %></h1>
-<%= button_to('delete',brand_path(@brand), method: :delete) %>
+<%= button_to('delete',@brand, method: :delete) %>
 <% @brand.items.each do |item| %>
 <div class='item' >
 	<a href=<%= "/items/#{item.id}" %>>
