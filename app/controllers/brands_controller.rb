@@ -1,4 +1,5 @@
 class BrandsController < ApplicationController
+	before_action :set_brand, only: [:show, :destroy]
 	def index
 		@brands = Brand.all
 	end
@@ -23,7 +24,6 @@ class BrandsController < ApplicationController
 	end
 
 	def destroy
-		puts "DESTROYYYYY #{@brand}"
 		if @brand.destroy
 			redirect_to brands_path
 		else
@@ -35,6 +35,10 @@ class BrandsController < ApplicationController
 
 	def brand_params
 		params.require(:brand).permit(:name)
+	end
+
+	def set_brand
+		@brand = Brand.find(params[:id])
 	end
 
 end

@@ -5,5 +5,5 @@
 	<h2>type: <%= link_to("#{@item.type.name}", @item.type) %></h2>
 	<h2>color: <%= link_to("#{@item.color.name}", @item.color) %></h2>
 	<%= link_to("edit",edit_item_path(@item)) %> 
-	<%= button_to("delete",item_path(@item)) %> 
+	<%= button_to("delete",item_path(@item), method: :delete) %> 
 </div>

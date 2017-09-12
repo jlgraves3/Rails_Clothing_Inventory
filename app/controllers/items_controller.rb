@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	before_action :set_item, only: [:show, :edit, :update, :destroy]
 	def index
 		@items = Item.all
 	end
@@ -41,9 +42,21 @@ class ItemsController < ApplicationController
 		end
 	end
 
+	def destroy
+		if @item.destroy 
+			redirect_to items_path
+		else
+			redirect_to @item
+		end
+	end
+
 	private
 
 	def item_params
 		params.require(:item).permit(:name, :brand_id,:color_id,:type_id)
+	end
+
+	def set_item
+		@item = Item.find(params[:id])
 	end
 end
