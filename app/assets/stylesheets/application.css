@@ -14,11 +14,14 @@
  *= require_self
  */
 
+
  body {
  	font-family: 'Avenir';
  	margin: 0;
  	color: #3E31FF;
  	text-align: center;
+ 	display: flex;
+ 	flex-direction: column;
  }
 
  h1 {
@@ -58,6 +61,11 @@
 .form {
 	display: flex;
 	flex-direction: column;
+}
+
+.single a:hover {
+	color: #7DFAC6;
+	transition: 0.4s;
 }
 
 
@@ -219,8 +227,9 @@ li a {
  	text-decoration: underline;
  }
 
-.links input:hover, .links a:hover {
-	color: #7DFAC6;
+ .links input[type='submit']:hover, .links a:hover {
+ 	background-color: white;
+ 	color: #7DFAC6;
 	transition: 0.5s;
  }
 
@@ -233,5 +242,14 @@ li a {
 
  input[type='submit'] {
  	margin: 20px auto;
+ }
+
+ @media screen and (min-width: 10px) and (max-width:400px) {
+ 	nav a {
+ 		font-size: 18px;
+ 	}
+ 	li {
+ 		width: 70vw;
+ 	}
  }
 
